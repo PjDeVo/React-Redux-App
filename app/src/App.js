@@ -10,7 +10,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Twitch Top Games</h1>
+      <div className="main-page-header">
+        <h1>Twitch Top Games</h1>
+        <img src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c540.png" />
+      </div>
+
       <Games />
     </div>
   );

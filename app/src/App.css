@@ -1,3 +1,25 @@
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -36,8 +58,91 @@
     transform: rotate(360deg);
   }
 } */
+
+.main-page-header {
+  display: flex;
+  justify-content: center;
+}
+
+.main-page-header img {
+  height: 50px;
+  width: 50px;
+}
+
+.main-image {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+
+  overflow: hidden;
+}
+
+.main-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.main-image:hover {
+  cursor: pointer;
+}
 .game {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: #772ce8;
+
+  text-transform: uppercase;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.game:hover {
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+.game-name {
+  font-size: 22px;
+}
+
+.game img {
+  height: 100px;
+}
+
+.game-link {
+  font-size: 16px;
+  width: 80%;
+  text-decoration: none;
+}
+
+.game-link:hover {
+  color: violet;
+}
+
+.games-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  font-size: 16px;
 }

@@ -14,11 +14,12 @@ export const getGames = () => (dispatch) => {
       },
     })
     .then((resp) => {
-      const games = resp.data.data.map((game) => {
+      const games = resp.data.data.map((game, index) => {
         return {
           name: game.name,
           url: game.box_art_url,
           href: `https://twitch.tv/${game.name}`,
+          rank: index + 1,
         };
       });
       dispatch({ type: SET_GAMES, payload: [...games] });
